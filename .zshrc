@@ -108,3 +108,8 @@ export PATH=$PATH:/home/nischal/apache-maven-3.3.9/bin
 #activator
 export PATH=$PATH:/home/nischal/activator-dist-1.3.10/bin
 
+#mongo
+export PATH=/home/nischal/Downloads/softwares/db/mongodb-linux-x86_64-ubuntu1404-3.2.9/bin:$PATH
+
+#g8
+export PATH=$PATH:/home/nischal/.conscript/bin/
