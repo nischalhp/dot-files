@@ -1,12 +1,13 @@
-# Path to your oh-my-zsh installation.
-  export ZSH=/home/nischal/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
-ZLE_RPROMPT_INDENT=0
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/nischal/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,16 +52,12 @@ ZLE_RPROMPT_INDENT=0
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins+=(zsh-completions)
-plugins+=(zsh-autosuggestions)
-autoload -U compinit && compinit
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -76,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -86,30 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nischal/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/nischal/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nischal/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/nischal/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
 source ~/.functions
-source ~/.aliases
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# added by Anaconda2 2.5.0 installer
-export PATH="/home/nischal/anaconda2/bin:$PATH"
-
-#spark
-export PATH=$PATH:/home/nischal/spark-1.6.1-bin-hadoop2.6/bin
-#spark home
-export SPARK_HOME=/home/nischal/spark-1.6.1-bin-hadoop2.6
-#spark + py4j
-export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
-
-#pyspark_python3
-export PYSPARK_PYTHON=python3
-
-export SPARK_CLASSPATH=$SPARK_HOME/lib/postgresql-9.4.1208.jre6.jar
-#maven
-export PATH=$PATH:/home/nischal/apache-maven-3.3.9/bin
-#activator
-export PATH=$PATH:/home/nischal/activator-dist-1.3.10/bin
-
-#mongo
-export PATH=/home/nischal/Downloads/softwares/db/mongodb-linux-x86_64-ubuntu1404-3.2.9/bin:$PATH
-
-#g8
-export PATH=$PATH:/home/nischal/.conscript/bin/
